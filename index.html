@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Speed Hub · Pitch · Speed UTV</title>
+<meta name="description" content="The pitch for Speed Hub: one platform for your customers, your sales and your back office, on your brand. Built, with a live demo inside." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Speed Hub" />
+<meta property="og:title" content="Speed Hub · Pitch · Speed UTV" />
+<meta property="og:description" content="One platform for your customers, your sales and your back office, on your brand. Built, with a live demo inside." />
+<meta property="og:image" content="https://soyalantapia.github.io/speed-hub-pitch/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://soyalantapia.github.io/speed-hub-pitch/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Speed Hub · Pitch · Speed UTV" />
+<meta name="twitter:image" content="https://soyalantapia.github.io/speed-hub-pitch/og.jpg" />
+<!-- Saira Condensed = racing display (matches the product); Saira = body; JetBrains Mono = numbers/VIN -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Saira:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================== THEME =========================================== */
+:root{
+  --black:#0a0a0a; --carbon:#161616; --carbon2:#1e1e1e; --line:#262626;
+  --orange:#ff7d00; --orange-dim:#cc6400; --white:#ffffff; --silver:#9a9a9a; --steel:#5c5c5c;
+  --ok:#22c55e; --danger:#ef4444; --warn:#f59e0b;
+  --font-display:"Saira Condensed",sans-serif; --font-body:"Saira",sans-serif; --font-mono:"JetBrains Mono",monospace;
+  --ease:cubic-bezier(0.16,1,0.3,1); --dur:0.7s;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+/* ---- viewport-base.css (full) ---- */
+html,body{height:100%;overflow-x:hidden}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
+.slide{width:100vw;height:100vh;height:100dvh;overflow:hidden;scroll-snap-align:start;display:flex;flex-direction:column;position:relative}
+.slide-content{flex:1;display:flex;flex-direction:column;justify-content:center;max-height:100%;overflow:hidden;padding:var(--slide-padding)}
+:root{--title-size:clamp(1.5rem,5vw,4rem);--h2-size:clamp(1.25rem,3.5vw,2.5rem);--h3-size:clamp(1rem,2.5vw,1.75rem);--body-size:clamp(0.75rem,1.5vw,1.125rem);--small-size:clamp(0.65rem,1vw,0.875rem);--slide-padding:clamp(1rem,4vw,4rem);--content-gap:clamp(0.5rem,2vw,2rem);--element-gap:clamp(0.25rem,1vw,1rem)}
+.card,.container,.content-box{max-width:min(90vw,1000px);max-height:min(80vh,700px)}
+.feature-list,.bullet-list{gap:clamp(0.4rem,1vh,1rem)}
+.feature-list li,.bullet-list li{font-size:var(--body-size);line-height:1.4}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:clamp(0.5rem,1.5vw,1rem)}
+img,.image-container{max-width:100%;max-height:min(50vh,400px);object-fit:contain}
+@media (max-height:700px){:root{--slide-padding:clamp(0.75rem,3vw,2rem);--content-gap:clamp(0.4rem,1.5vw,1rem);--title-size:clamp(1.25rem,4.5vw,2.5rem);--h2-size:clamp(1rem,3vw,1.75rem)}}
+@media (max-height:600px){:root{--slide-padding:clamp(0.5rem,2.5vw,1.5rem);--content-gap:clamp(0.3rem,1vw,0.75rem);--title-size:clamp(1.1rem,4vw,2rem);--body-size:clamp(0.7rem,1.2vw,0.95rem)}.nav-dots,.keyboard-hint,.decorative{display:none}}
+@media (max-height:500px){:root{--slide-padding:clamp(0.4rem,2vw,1rem);--title-size:clamp(1rem,3.5vw,1.5rem);--h2-size:clamp(0.9rem,2.5vw,1.25rem);--body-size:clamp(0.65rem,1vw,0.85rem)}}
+@media (max-width:600px){:root{--title-size:clamp(1.25rem,7vw,2.5rem)}.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.2s!important}html{scroll-behavior:auto}}
+
+/* =========================================== BASE LOOK =========================================== */
+body{background:var(--black);color:var(--white);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+.slide{background:radial-gradient(120% 80% at 80% -10%,rgba(255,125,0,.10),transparent 55%),linear-gradient(180deg,#0c0c0c,#070707)}
+.slide::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:repeating-linear-gradient(115deg,transparent 0 38px,rgba(255,255,255,.012) 38px 39px)}
+.display{font-family:var(--font-display);font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:.96}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.eyebrow{font-family:var(--font-display);font-style:italic;font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:var(--small-size);color:var(--orange)}
+.lead{color:var(--silver);font-size:var(--body-size);line-height:1.5;max-width:60ch}
+.amp{color:var(--orange)}
+.kicker-line{width:clamp(40px,6vw,72px);height:4px;background:var(--orange);border-radius:2px}
+.tag{display:inline-flex;align-items:center;gap:.5em;font-size:var(--small-size);color:var(--steel)}
+.wrap{width:100%;max-width:min(94vw,1240px);margin:0 auto}
+::selection{background:var(--orange);color:#0a0a0a}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity var(--dur) var(--ease),transform var(--dur) var(--ease)}
+.slide.visible .reveal{opacity:1;transform:none}
+.slide.visible .reveal:nth-child(1){transition-delay:.05s}.slide.visible .reveal:nth-child(2){transition-delay:.13s}
+.slide.visible .reveal:nth-child(3){transition-delay:.21s}.slide.visible .reveal:nth-child(4){transition-delay:.29s}
+.slide.visible .reveal:nth-child(5){transition-delay:.37s}.slide.visible .reveal:nth-child(6){transition-delay:.45s}
+.d1{transition-delay:.1s!important}.d2{transition-delay:.2s!important}.d3{transition-delay:.3s!important}.d4{transition-delay:.4s!important}.d5{transition-delay:.5s!important}.d6{transition-delay:.6s!important}
+
+/* progress + dots */
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:var(--orange);width:0;z-index:9999;box-shadow:0 0 12px rgba(255,125,0,.6)}
+.nav-dots{position:fixed;right:clamp(8px,1.6vw,20px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:9000}
+.nav-dots button{width:9px;height:9px;border-radius:50%;border:1px solid var(--steel);background:transparent;cursor:pointer;padding:0;transition:all .3s}
+.nav-dots button.active{background:var(--orange);border-color:var(--orange);transform:scale(1.25);box-shadow:0 0 10px rgba(255,125,0,.6)}
+.slide-no{position:fixed;left:clamp(10px,1.6vw,22px);bottom:clamp(10px,1.6vw,20px);font-family:var(--font-mono);font-size:.72rem;color:var(--steel);z-index:9000;letter-spacing:.1em}
+.hint{position:fixed;right:clamp(10px,1.6vw,22px);bottom:clamp(10px,1.6vw,20px);font-size:.66rem;color:var(--steel);z-index:9000;letter-spacing:.12em;text-transform:uppercase}
+
+/* frames */
+.phone{position:relative;border:2px solid #2c2c2c;border-radius:30px;padding:9px 8px;background:#000;box-shadow:0 30px 70px -25px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.03);max-height:74vh}
+.phone::before{content:"";position:absolute;top:14px;left:50%;transform:translateX(-50%);width:34%;height:5px;border-radius:3px;background:#222;z-index:2}
+.phone img{display:block;border-radius:22px;max-height:70vh;width:auto}
+.browser{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--carbon);box-shadow:0 28px 64px -24px rgba(0,0,0,.85);max-width:100%}
+.browser-bar{display:flex;align-items:center;gap:6px;padding:8px 12px;background:#101010;border-bottom:1px solid var(--line)}
+.browser-bar i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.browser-bar .u{margin-left:14px;font-family:var(--font-mono);font-size:.66rem;color:var(--steel);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.browser img{display:block;width:100%;max-height:66vh;object-fit:cover;object-position:top}
+
+/* chips/pills */
+.chip{display:inline-flex;align-items:center;gap:.4em;border:1px solid var(--line);background:var(--carbon);border-radius:999px;padding:.3em .8em;font-size:var(--small-size);color:var(--silver)}
+.chip.orange{border-color:rgba(255,125,0,.35);background:rgba(255,125,0,.1);color:var(--orange)}
+.chip.ok{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.1);color:var(--ok)}
+
+/* layouts */
+.split{display:grid;grid-template-columns:1fr;gap:var(--content-gap);align-items:center;width:100%}
+@media (min-width:860px){.split{grid-template-columns:1.05fr 1fr}.split.media-left{grid-template-columns:1fr 1.05fr}}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.5rem,1.2vw,1rem)}
+@media (min-width:860px){.cards.c3{grid-template-columns:repeat(3,1fr)}}
+.fcard{border:1px solid var(--line);background:linear-gradient(180deg,var(--carbon),#121212);border-radius:14px;padding:clamp(.7rem,1.4vw,1.15rem)}
+.fcard h4{font-family:var(--font-display);font-style:italic;font-weight:800;text-transform:uppercase;font-size:clamp(.95rem,1.5vw,1.2rem);letter-spacing:-.01em}
+.fcard p{color:var(--silver);font-size:var(--small-size);line-height:1.45;margin-top:.25em}
+.fcard .ic{color:var(--orange);font-size:1.3em;line-height:1}
+.stat{font-family:var(--font-display);font-style:italic;font-weight:900;color:var(--orange);line-height:.9}
+ul.checks{list-style:none;display:grid;gap:.5em}
+ul.checks li{display:flex;gap:.6em;align-items:baseline;font-size:var(--body-size);color:#e9e9e9}
+ul.checks li::before{content:"";flex:0 0 auto;width:.62em;height:.62em;margin-top:.45em;background:var(--orange);transform:rotate(45deg)}
+.bigprice{font-family:var(--font-display);font-style:italic;font-weight:900;color:var(--white);line-height:.85;letter-spacing:-.02em}
+.btn{display:inline-flex;align-items:center;gap:.5em;background:var(--orange);color:#0a0a0a;font-weight:700;text-decoration:none;border-radius:10px;padding:.6em 1.1em;font-size:var(--body-size)}
+.btn.ghost{background:transparent;color:var(--white);border:1px solid var(--line)}
+a{color:var(--orange)}
+
+/* title slide */
+.title-bg{position:absolute;inset:0;background:url('img/hero-bg.jpg') center/cover;opacity:.22}
+.title-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,7,7,.5),rgba(7,7,7,.2) 45%,#070707)}
+
+/* edit mode */
+.edit-hotzone{position:fixed;top:0;left:0;width:70px;height:70px;z-index:10000;cursor:pointer}
+.edit-toggle{position:fixed;top:14px;left:14px;z-index:10001;opacity:0;pointer-events:none;transition:opacity .3s;background:var(--carbon);border:1px solid var(--line);color:var(--orange);border-radius:8px;width:38px;height:38px;font-size:16px;cursor:pointer}
+.edit-toggle.show,.edit-toggle.active{opacity:1;pointer-events:auto}
+.edit-banner{position:fixed;top:14px;left:60px;z-index:10001;background:var(--orange);color:#0a0a0a;font-weight:700;font-size:.7rem;padding:.4em .8em;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .3s}
+.edit-banner.active{opacity:1}
+body.edit-active [contenteditable]{outline:1px dashed rgba(255,125,0,.5);outline-offset:3px;border-radius:3px}
+</style>
+</head>
+<body>
+<div class="progress-bar"></div>
+<nav class="nav-dots"></nav>
+<div class="slide-no"></div>
+<div class="hint">← → to navigate</div>
+<div class="edit-hotzone"></div>
+<button class="edit-toggle" id="editToggle" title="Edit mode (E)">✏</button>
+<div class="edit-banner" id="editBanner">EDIT MODE · click text · ⌘S to save</div>
+
+<!-- ============ 1 · TITLE ============ -->
+<section class="slide" data-label="Cover">
+  <div class="title-bg decorative"></div>
+  <div class="slide-content" style="align-items:center;text-align:center;position:relative">
+    <img class="reveal" src="img/logo.png" alt="Speed UTV" style="height:clamp(34px,5vw,58px);margin-bottom:clamp(1rem,3vh,2.2rem)" />
+    <h1 class="display reveal" style="font-size:clamp(2.6rem,11vw,8rem);color:#fff">Speed <span class="amp">Hub</span></h1>
+    <p class="reveal lead" style="text-align:center;max-width:42ch;margin-top:.6em;font-size:clamp(.9rem,2vw,1.35rem);color:#cfcfcf">The operating system for Speed UTV: your customers, your back office, your brand. <span class="amp">Built, with a live demo inside.</span></p>
+    <div class="reveal" style="margin-top:clamp(1.2rem,3vh,2.4rem);display:flex;gap:.6em;flex-wrap:wrap;justify-content:center">
+      <span class="chip orange">Owner App</span><span class="chip orange">Speed Admin</span><span class="chip ok">● Live demo inside</span>
+    </div>
+    <p class="reveal tag" style="margin-top:clamp(1rem,3vh,2rem)">Xnod × Speed UTV · Product walkthrough · 2026</p>
+  </div>
+</section>
+
+<section class="slide" data-label="Act I">
+  <div class="slide-content" style="align-items:center;text-align:center;position:relative">
+    <div class="wrap">
+      <div class="reveal" style="font-family:var(--font-mono);color:var(--orange);letter-spacing:.32em;font-size:var(--small-size)">01</div>
+      <h2 class="display reveal" style="font-size:var(--title-size);margin-top:.15em">The problem</h2>
+      <div class="kicker-line reveal" style="margin:.8em auto 0"></div>
+      <p class="lead reveal" style="text-align:center;max-width:44ch;margin:.9em auto 0">Money is walking out the door every month. Here is exactly where, and how much.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-label="The problem">
+  <div class="slide-content"><div class="wrap">
+    <div class="kicker-line reveal"></div>
+    <h2 class="display reveal" style="font-size:var(--title-size);margin-top:.5em">You can't see<br>your own <span class="amp">business.</span></h2>
+    <p class="lead reveal" style="margin-top:.7em">Not because your team is not working hard. Because it all lives by hand, across too many places that don't talk to each other.</p>
+    <ul class="checks reveal" style="margin-top:1.1em;max-width:72ch">
+      <li>No control over the insurance or the paperwork.</li>
+      <li>No tracking of what each customer actually bought.</li>
+      <li>No way to reach your customers to keep selling to them.</li>
+      <li>No way to understand everything about a single customer.</li>
+    </ul>
+    <p class="reveal tag" style="margin-top:1.2em">And NetSuite charges you every month, without fixing any of it.</p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="The cost">
+  <div class="slide-content">
+    <div class="wrap">
+      <div class="eyebrow reveal">What it's costing</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.3em">It adds up fast, and silently.</h2>
+      <div class="cards c3 reveal" style="margin-top:clamp(1rem,3vh,2rem)">
+        <div class="fcard"><div class="stat" style="font-size:clamp(2rem,5vw,3.4rem)">3×</div><h4 style="margin-top:.2em">Billed on one VIN</h4><p><span class="mono amp">+$6,398</span> overbilled by the insurer on one customer's warranty. Paid, never questioned.</p></div>
+        <div class="fcard"><div class="stat" style="font-size:clamp(2rem,5vw,3.4rem)">2×</div><h4 style="margin-top:.2em">Duplicate vendor pay</h4><p>Same invoice, paid twice. <span class="mono amp">+$4,850</span> caught in the demo. You only get it back if the vendor is honest.</p></div>
+        <div class="fcard"><div class="stat" style="font-size:clamp(2rem,5vw,3.4rem)">$0</div><h4 style="margin-top:.2em">Coverage filed</h4><p>Warranties collected from buyers and never registered with the insurer. Revenue in, no coverage out.</p></div>
+      </div>
+      <p class="lead reveal" style="margin-top:1.1em">Plus every renewal nobody follows up on: recurring revenue, gone. <span class="amp">The leak is the product. Let's fix the product.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-label="Missed revenue">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">And the money you never even see</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">The leaks are only half of it.</h2>
+    <p class="lead reveal" style="margin-top:.7em">The other half is revenue that never shows up, because nobody can see the customer, the timing, or the opportunity.</p>
+    <div class="cards c3 reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem)">
+      <div class="fcard"><div class="ic">🛒</div><h4>Upsell that walks away</h4><p>A buyer shows up with cash for an upgrade and there is no clean way to take the order. The sale walks out.</p></div>
+      <div class="fcard"><div class="ic">🛡️</div><h4>Coverage never offered</h4><p>Factory cover lapses at 6 months and nobody offers the 1 to 4 year extension. The renewal is lost.</p></div>
+      <div class="fcard"><div class="ic">📉</div><h4>Leads gone cold</h4><p>Financing and catalog interest with no follow up. The warm lead cools and buys nothing.</p></div>
+    </div>
+    <p class="reveal tag" style="margin-top:1.1em">No customer 360 (no single view of a client) means no upsell and no second sale. That is recurring revenue, gone.</p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Act II">
+  <div class="slide-content" style="align-items:center;text-align:center;position:relative">
+    <div class="wrap">
+      <div class="reveal" style="font-family:var(--font-mono);color:var(--orange);letter-spacing:.32em;font-size:var(--small-size)">02</div>
+      <h2 class="display reveal" style="font-size:var(--title-size);margin-top:.15em">The solution</h2>
+      <div class="kicker-line reveal" style="margin:.8em auto 0"></div>
+      <p class="lead reveal" style="text-align:center;max-width:44ch;margin:.9em auto 0">One platform, on your brand. It stops the leaks and starts the upside.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-label="The idea">
+  <div class="slide-content" style="align-items:center;text-align:center">
+    <div class="wrap">
+      <div class="eyebrow reveal">The idea</div>
+      <h2 class="display reveal" style="font-size:var(--title-size);margin-top:.25em">One platform. Your brand.<br><span class="amp">Two experiences.</span></h2>
+      <div class="reveal" style="margin-top:clamp(1.2rem,4vh,2.4rem);display:grid;gap:clamp(.6rem,1.5vh,1.1rem);max-width:880px;margin-left:auto;margin-right:auto">
+        <div class="fcard" style="border-color:rgba(255,125,0,.4)"><h4 style="color:var(--orange)">Speed Hub · one source of truth</h4><p style="font-size:var(--small-size)">Every customer · every VIN · every contract · every payment, entered once.</p></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(.6rem,1.5vw,1.1rem)">
+          <div class="fcard"><div class="ic">📱</div><h4>Owner App</h4><p>The buyer's app: garage, coverage, service, catalog, community.</p></div>
+          <div class="fcard"><div class="ic">🖥️</div><h4>Speed Admin</h4><p>Your team's back office: 360°, warranties, payments, aftersales.</p></div>
+        </div>
+      </div>
+      <p class="reveal tag" style="margin-top:1.1em">Built once. The system blocks the error instead of asking a human to double check.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-label="Owner App">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal" style="display:flex;justify-content:center"><div class="phone"><img src="img/owner-garage.png" alt="Owner App · Garage"/></div></div>
+    <div>
+      <div class="eyebrow reveal">Owner App</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Every buyer leaves<br>with <span class="amp">your app.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Their garage, coverage, service and the Speed Cartel (your owner community), in their pocket from day one. You stay with them long after the sale, on your brand.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li>The vehicle, docs and history, one tap away.</li>
+        <li>A live status ring: coverage, service, Speed Key (the horsepower unlock).</li>
+        <li>You become the channel, not a phone call.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Owner features">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">What owners get</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">A reason to stay <span class="amp">in the family.</span></h2>
+    <div class="cards c3 reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem)">
+      <div class="fcard"><div class="ic">🚙</div><h4>Garage 360</h4><p>Every vehicle, document, service and complaint in one timeline.</p></div>
+      <div class="fcard"><div class="ic">🛡️</div><h4>Coverage & renewal</h4><p>Factory + White Glove ESA (extended warranty), renewed in <strong>one tap</strong> before it lapses.</p></div>
+      <div class="fcard"><div class="ic">🔧</div><h4>Service & dash codes</h4><p>Book a slot; type a fault code (P0118) and get an answer + a ticket.</p></div>
+      <div class="fcard"><div class="ic">🛒</div><h4>Catalog & financing</h4><p>The 2026 lineup, accessories, Speed Key, FreedomRoad simulator. Sell more.</p></div>
+      <div class="fcard"><div class="ic">🏁</div><h4>Speed Cartel</h4><p>Events, news, and a live build tracker for cars in production.</p></div>
+      <div class="fcard"><div class="ic">🔔</div><h4>Push notifications</h4><p>Reach every owner instantly: renewals, recalls, launches, events.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Any screen">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">One app, any device</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Phone, tablet, computer.</h2>
+    <div class="reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem);display:grid;grid-template-columns:1fr;gap:clamp(.6rem,1.5vw,1.1rem)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(.6rem,1.5vw,1.1rem)">
+        <div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /owner/catalog</span></div><img src="img/owner-catalog-desktop.png" alt="Owner catalog on desktop"/></div>
+        <div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /owner</span></div><img src="img/owner-garage-desktop.png" alt="Owner garage on desktop"/></div>
+      </div>
+    </div>
+    <p class="lead reveal" style="margin-top:.9em">A real, installable PWA (an app that installs like any other), not a prototype. It adapts: single column on a phone, a sidebar and multiple columns on a laptop.</p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Automation">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">/admin/warranties</span></div><img src="img/admin-warranties.png" alt="Warranty workflow sending to the insurer"/></div></div>
+    <div>
+      <div class="eyebrow reveal">End to end automation</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Register the sale once.<br><span class="amp">The system does the rest.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">The whole commercial back office runs itself, with no retyping and no handoffs that get dropped.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>1. Sale registered.</strong> One entry, on the customer profile.</li>
+        <li><strong>2. The contract, generated.</strong> Built and ready to file with the insurer, no retyping.</li>
+        <li><strong>3. The numbers, done.</strong> What Speed owes the insurer is calculated for you, no spreadsheet.</li>
+        <li><strong>4. Owner emailed.</strong> Their copy and coverage land in their app and inbox.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Speed Admin">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">Speed Admin</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Your back office,<br><span class="amp">rebuilt.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">The back office your team actually lives in: customers, warranties, payments, aftersales, without the NetSuite tax. The dashboard opens on the one number that matters: the money the system just saved you.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li>Find any customer in 5 seconds.</li>
+        <li>Warranties that send themselves to the insurer.</li>
+        <li>A system that <strong>blocks expensive mistakes</strong>.</li>
+      </ul>
+    </div>
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /admin</span></div><img src="img/admin-dashboard.png" alt="Admin dashboard"/></div></div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Customer 360">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">/admin/customers/john-doe</span></div><img src="img/admin-customer360.png" alt="Customer 360"/></div></div>
+    <div>
+      <div class="eyebrow reveal">Customer 360</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Everything about a customer.<br><span class="amp">One screen.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Vehicles, coverage, every invoice, service, complaint and event, all in one unified timeline. It tells your team the next step, right on the screen.</p>
+      <p class="reveal tag" style="margin-top:1em">The hours your team spends hunting through NetSuite to piece one customer together? Gone.</p>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="It blocks the mistake">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">The wow</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">The system blocks<br>the mistake <span class="amp">by design.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Try to register a VIN (chassis number) that already exists, even in lowercase or written differently, and it <strong>blocks you</strong>, showing the existing record.</p>
+      <p class="reveal" style="margin-top:.8em;font-size:var(--body-size);color:#e9e9e9">This is the exact duplicate that got billed three times. <span class="amp">Now it can't happen.</span> Same for paying a vendor invoice twice.</p>
+    </div>
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">/admin/vehicles</span></div><img src="img/admin-vin-block.png" alt="Duplicate VIN blocked"/></div></div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Recover the money">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">/admin/warranties · reconciliation</span></div><img src="img/admin-reconciliation.png" alt="the insurer reconciliation"/></div></div>
+    <div>
+      <div class="eyebrow reveal">Reconciliation</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">It finds the money<br>you <span class="amp">already lost.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Every contract is reconciled against what the insurer actually billed. The triple charge on VIN …0915 surfaces instantly, <span class="mono amp">+$6,398</span> flagged to recover in one click.</p>
+      <p class="reveal tag" style="margin-top:1em">No more trusting that the paperwork matched. The system proves it.</p>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Upsell A">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">The relationship, not the receipt</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">The sale is the start,<br><span class="amp">not the finish line.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Once every owner lives in your app, the same customer keeps buying, and you finally have a way to reach them and sell again.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Upsell parts and upgrades.</strong> The owner taps to buy an upgrade and it lands on their profile. The cash that used to walk out the door now closes in the app.</li>
+        <li><strong>One channel to every owner.</strong> Reach them directly with the right offer at the right time, no phone tag, no lost customer.</li>
+      </ul>
+    </div>
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /owner/catalog</span></div><img src="img/owner-catalog-desktop.png" alt="Catalog and upgrades in the Owner App"/></div></div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Upsell B">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal" style="display:flex;justify-content:center"><div class="phone"><img src="img/owner-coverage.png" alt="Coverage and renewal in the Owner App"/></div></div>
+    <div>
+      <div class="eyebrow reveal">Coverage that renews itself</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">The insurance becomes<br><span class="amp">recurring revenue.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">The factory cover runs out at 6 months. The app turns that into years of coverage you actually keep selling.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Sell and extend the insurance.</strong> 6 month factory cover becomes a 1 to 4 year plan, offered at the right moment and filed with the insurer.</li>
+        <li><strong>Renew before it lapses.</strong> The owner renews in one tap, fast and safe, so coverage never breaks and the revenue stays yours.</li>
+        <li><strong>Win back outside policies.</strong> Paying more elsewhere? The system spots it and brings them back with a better Speed deal.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Claims">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">Claims from the phone</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">It breaks,<br>the claim opens <span class="amp">from the phone.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">The owner snaps a photo, describes the problem and files the claim in 30 seconds. You receive it and track it to resolution, all wired to the insurer.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Photo, one line, done.</strong> Something breaks out in the desert and the claim is open right from the phone. No calls, no paperwork.</li>
+        <li><strong>They track every step.</strong> The owner watches the status live (in review → sent to the insurer → approved → resolved) and gets a push at each step.</li>
+        <li><strong>Wired to the insurer.</strong> One tap files it with the insurer and the system works out what the ESA covers. The owner pays $0 and stays locked into your coverage.</li>
+      </ul>
+      <p class="reveal tag" style="margin-top:1em">It kills the number one aftersales pain and turns the warranty into the reason they never leave for another brand.</p>
+    </div>
+    <div class="reveal" style="display:flex;justify-content:center"><div class="phone"><img src="img/owner-claims.png" alt="Filing a warranty claim from the Owner App"/></div></div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Aftersales">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">/admin/campaigns</span></div><img src="img/admin-campaigns.png" alt="Campaigns"/></div></div>
+    <div>
+      <div class="eyebrow reveal">Aftersales engine</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Stop chasing renewals.<br>Let the <span class="amp">system do it.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Coverage expiring in 90 / 60 / 30 days → owners get a push automatically. Segment by model, location or event and reach them in one tap.</p>
+      <p class="reveal tag" style="margin-top:1em">Recurring revenue you're leaving on the table today.</p>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Roles">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">Roles and access</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Everyone sees<br><span class="amp">their own lane.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Each person logs in and gets exactly the access they need, nothing more.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Robby: full access.</strong> Every screen, every number, the whole business in one place.</li>
+        <li><strong>Sales rep: the sales floor only.</strong> Sales, customers, catalog and campaigns. No finance, no settings, no clutter.</li>
+      </ul>
+      <p class="reveal tag" style="margin-top:1em">Add a role or change who sees what in seconds. It is your platform.</p>
+    </div>
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /admin (Sales rep)</span></div><img src="img/admin-roles.png" alt="Sales rep limited to the sales area"/></div></div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Pipeline">
+  <div class="slide-content"><div class="wrap split media-left">
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /admin/pipeline</span></div><img src="img/admin-pipeline.png" alt="Sales pipeline board"/></div></div>
+    <div>
+      <div class="eyebrow reveal">Sales pipeline</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Every deal,<br>from hello to <span class="amp">closed.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">One board moves each opportunity from lead to quoted to won, so nothing slips and the forecast is always live.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>Lead, quoted, won.</strong> Move the deal forward and the open pipeline value updates as you go.</li>
+        <li><strong>A branded quote in one click.</strong> Generate a clean Speed UTV quote (PDF) for the customer, on the spot.</li>
+        <li><strong>Won deals book the sale.</strong> One tap turns a closed deal into a registered sale.</li>
+      </ul>
+    </div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Sales cockpit">
+  <div class="slide-content"><div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">The sales register</div>
+      <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">A cockpit,<br>not a <span class="amp">spreadsheet.</span></h2>
+      <p class="lead reveal" style="margin-top:.7em">Every vehicle sold on one screen, with the targets and the team's pay built in.</p>
+      <ul class="checks reveal" style="margin-top:1em">
+        <li><strong>A live monthly goal.</strong> A progress bar fills with every sale, so the floor always knows where it stands.</li>
+        <li><strong>Filter in a tap.</strong> By model, by location, by month. Revenue and attach rate update instantly.</li>
+        <li><strong>Commission, calculated.</strong> Each rep sees their cut on every sale. No spreadsheet, no arguments.</li>
+      </ul>
+    </div>
+    <div class="reveal"><div class="browser"><div class="browser-bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">speed-demo-web · /admin/sales</span></div><img src="img/admin-sales.png" alt="Sales register with goal and commission"/></div></div>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Act III">
+  <div class="slide-content" style="align-items:center;text-align:center;position:relative">
+    <div class="wrap">
+      <div class="reveal" style="font-family:var(--font-mono);color:var(--orange);letter-spacing:.32em;font-size:var(--small-size)">03</div>
+      <h2 class="display reveal" style="font-size:var(--title-size);margin-top:.15em">The money</h2>
+      <div class="kicker-line reveal" style="margin:.8em auto 0"></div>
+      <p class="lead reveal" style="text-align:center;max-width:44ch;margin:.9em auto 0">What it saves, what it unlocks, and what it costs. The math is easy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide" data-label="Money saved">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">Everything you lose today</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">It stops the bleed<br>and <span class="amp">starts the upside.</span></h2>
+    <p class="lead reveal" style="margin-top:.7em">Every leak below is money leaving the business right now. The platform turns each one into a saving or a sale.</p>
+    <div class="cards c3 reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem)">
+      <div class="fcard"><div class="ic">🩸</div><h4>The bleed it stops</h4><p>Invoices paid twice, warranties billed more than once, coverage collected and never filed. Money out the door for nothing.</p></div>
+      <div class="fcard"><div class="ic">⏳</div><h4>The renewals it saves</h4><p>Every policy that lapses because nobody followed up. Recurring revenue that walks away, owner by owner.</p></div>
+      <div class="fcard"><div class="ic">📈</div><h4>The sales it starts</h4><p>Upgrades, parts and coverage you never get to offer, to customers you can't reach. The second sale that never happens.</p></div>
+    </div>
+    <p class="reveal tag" style="margin-top:1.1em">You can't put a number on it today, because you can't even see it. That is the point.</p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="The model">
+  <div class="slide-content" style="align-items:center;text-align:center"><div class="wrap">
+    <div class="eyebrow reveal">How it works</div>
+    <h2 class="display reveal" style="font-size:var(--h3-size);margin-top:.2em;color:#cfcfcf;font-weight:700">One flat fee. That's the whole bill.</h2>
+    <div class="reveal" style="margin-top:.3em"><span class="bigprice" style="font-size:clamp(3.4rem,15vw,9rem)">$1,750</span><span class="display" style="font-size:clamp(1rem,3vw,2rem);color:var(--silver)"> / month</span></div>
+    <p class="reveal" style="margin-top:.5em;font-size:var(--body-size);color:var(--silver)">Prefer yearly? <span class="amp">Two months on us</span> · <span class="mono" style="color:#fff">$17,500</span><span style="color:var(--steel)">/year</span></p>
+    <div class="reveal" style="display:grid;grid-template-columns:1fr;gap:clamp(.5rem,1.5vw,1rem);max-width:900px;margin:clamp(.8rem,2.5vh,1.4rem) auto 0">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(.5rem,1.2vw,.9rem);text-align:left">
+        <div class="fcard"><h4 style="color:var(--orange)">All included</h4><ul class="checks" style="margin-top:.4em;font-size:var(--small-size)"><li>The platform itself, built by us</li><li>Unlimited support</li><li>Unlimited new features &amp; implementations</li><li>We work as your product team</li><li>Hosting, updates &amp; training</li></ul></div>
+        <div class="fcard"><h4 style="color:var(--orange)">No fine print</h4><ul class="checks" style="margin-top:.4em;font-size:var(--small-size)"><li>No setup or onboarding fee</li><li>Month to month, cancel anytime</li><li>No charges per user, no surprises</li><li>Your data and your brand, always yours</li><li>One invoice. With that, you pay for everything.</li></ul></div>
+      </div>
+    </div>
+    <p class="reveal tag" style="margin-top:1em">It's not software you license. It's a product team that builds and runs your whole platform, on your brand, with support always on.</p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Your terms">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">The exit, in writing</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Your data, your brand,<br><span class="amp">your terms.</span></h2>
+    <p class="lead reveal" style="margin-top:.7em">Month to month only works if leaving is painless. So it is built to be.</p>
+    <div class="cards c3 reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem)">
+      <div class="fcard"><div class="ic">&#128228;</div><h4>Walk away with everything</h4><p>Cancel and you get a full export, financial, customer and warranty data, in a standard format you can open anywhere.</p></div>
+      <div class="fcard"><div class="ic">&#128274;</div><h4>Yours, always</h4><p>Your data and your brand are yours from day one. We run it for you; we never hold it hostage.</p></div>
+      <div class="fcard"><div class="ic">&#128737;</div><h4>Secure by default</h4><p>Encrypted, access controlled, on infrastructure that scales. No shared spreadsheets, no loose files.</p></div>
+    </div>
+    <p class="reveal tag" style="margin-top:1.1em">Cancel anytime is only real when your data walks out with you. Here it does.</p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Compare">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">Put it next to what you pay now</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">$1,750 is the easy part.</h2>
+    <div class="cards c3 reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem)">
+      <div class="fcard"><h4 style="color:var(--steel)">NetSuite today</h4><p>Expensive, priced per user, and dated. It stops none of the leaks. You already want out.</p></div>
+      <div class="fcard"><h4 style="color:var(--steel)">Hire a dev team</h4><p><span class="mono">$200k to $300k+/yr</span> for 2 to 3 people, plus servers and maintenance. You wait a year, then maintain it forever.</p></div>
+      <div class="fcard" style="border-color:rgba(255,125,0,.5);background:linear-gradient(180deg,rgba(255,125,0,.08),#0e0e0e)"><h4 style="color:var(--orange)">Speed Hub</h4><p><span class="mono amp">$1,750/mo</span>, everything included, already built. It stops the bleeding.</p></div>
+    </div>
+    <p class="lead reveal" style="margin-top:1.1em">One flat fee. Less than a NetSuite bundle, less than one salary, and unlike both, <span class="amp">it pays for itself the first month it blocks a duplicate.</span></p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="It's yours">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">Why it fits Speed</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">You're not renting software.<br>You own a <span class="amp">platform, and a team.</span></h2>
+    <div class="cards c3 reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem)">
+      <div class="fcard"><div class="ic">🏷️</div><h4>The full Speed UTV brand</h4><p>Your logo, your colors, the cars, the editions, the Speed Cartel. It looks and feels 100% Speed, not a generic SaaS (subscription software) with your logo bolted on.</p></div>
+      <div class="fcard"><div class="ic">👥</div><h4>A dedicated team</h4><p>A product team building for you every month: design, engineering, the works.</p></div>
+      <div class="fcard"><div class="ic">📈</div><h4>It grows with you</h4><p>Every new idea is included. No change orders, no phases to negotiate.</p></div>
+    </div>
+    <p class="lead reveal" style="margin-top:1.1em">You built your own UTV when nobody made the one you wanted. <span class="amp">Same move, now for your software.</span></p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="What's next">
+  <div class="slide-content"><div class="wrap">
+    <div class="eyebrow reveal">Next steps, all included</div>
+    <h2 class="display reveal" style="font-size:var(--h2-size);margin-top:.25em">Up and running in 2 months.</h2>
+    <div class="reveal" style="margin-top:clamp(.9rem,2.5vh,1.6rem)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(.6rem,1.5vw,1rem);text-align:left">
+        <div class="fcard"><h4 style="color:var(--orange)">Month 1 · Set it up</h4><ul class="checks" style="margin-top:.4em;font-size:var(--small-size)"><li>Connect your insurer, payments and financing</li><li>Migrate and clean your data, no duplicates</li><li>Train your whole team, in person</li><li>Videos for every role to keep</li></ul></div>
+        <div class="fcard" style="border-color:rgba(255,125,0,.4)"><h4 style="color:var(--orange)">Month 2 · Go live</h4><ul class="checks" style="margin-top:.4em;font-size:var(--small-size)"><li>Your app published to the App Store and Play Store</li><li>Everything on your own domain</li><li>We tune it to your operation as you use it</li><li>You go live with your owners</li></ul></div>
+      </div>
+    </div>
+    <p class="reveal tag" style="margin-top:1.1em">Active listening the whole way: we adapt the platform to how you actually work. The app stores run about $200 a year, that is it.</p>
+  </div></div>
+</section>
+
+<section class="slide" data-label="Next steps">
+  <div class="title-bg decorative" style="background-image:url('img/action2.jpg')"></div>
+  <div class="slide-content" style="align-items:center;text-align:center;position:relative"><div class="wrap">
+    <img class="reveal" src="img/logo.png" alt="Speed UTV" style="height:clamp(26px,3.4vw,42px);margin-bottom:.8em"/>
+    <h2 class="display reveal" style="font-size:var(--title-size)">Let's start <span class="amp">this month.</span></h2>
+    <p class="lead reveal" style="text-align:center;max-width:46ch;margin:.7em auto 0">It's built. It's live. It's your brand. <span class="amp">$1,750/month, everything included.</span></p>
+    <div class="reveal" style="margin-top:clamp(1rem,3vh,1.8rem);display:grid;grid-template-columns:1fr;gap:.5em;max-width:560px;margin-left:auto;margin-right:auto;text-align:left">
+      <div class="chip orange" style="justify-content:flex-start">1 · Open the demo on your phone and see it for real.</div>
+      <div class="chip orange" style="justify-content:flex-start">2 · We connect the insurer + your data.</div>
+      <div class="chip orange" style="justify-content:flex-start">3 · You go live with your owners.</div>
+    </div>
+    <div class="reveal" style="margin-top:clamp(.9rem,2.5vh,1.4rem);display:flex;gap:.6em;flex-wrap:wrap;justify-content:center">
+      <a class="btn" href="https://soyalantapia.github.io/speed-demo-web/" target="_blank" rel="noopener">Open the live demo →</a>
+      <a class="btn ghost" href="https://soyalantapia.github.io/speed-hub-overview/" target="_blank" rel="noopener">The 5 minute overview</a>
+    </div>
+    <p class="reveal tag" style="margin-top:clamp(.9rem,2.5vh,1.4rem)">Xnod × Speed UTV</p>
+  </div></div>
+</section>
+
+<script>
+/* =========================================== CONTROLLER =========================================== */
+class Deck{
+  constructor(){
+    this.slides=[...document.querySelectorAll('.slide')];
+    this.dotsEl=document.querySelector('.nav-dots');
+    this.bar=document.querySelector('.progress-bar');
+    this.noEl=document.querySelector('.slide-no');
+    this.current=0;
+    this.observer();this.dots();this.keys();this.touch();this.update();
+    window.addEventListener('scroll',()=>this.onScroll(),{passive:true});
+  }
+  observer(){
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');this.current=this.slides.indexOf(e.target);this.update();}})},{threshold:.55});
+    this.slides.forEach(s=>io.observe(s));
+  }
+  dots(){
+    this.dotsEl.innerHTML='';
+    this.slides.forEach((s,i)=>{const b=document.createElement('button');b.setAttribute('aria-label',s.dataset.label||('Slide '+(i+1)));b.title=s.dataset.label||'';b.onclick=()=>this.go(i);this.dotsEl.appendChild(b);});
+  }
+  go(i){i=Math.max(0,Math.min(this.slides.length-1,i));this.slides[i].scrollIntoView({behavior:'smooth'});}
+  update(){
+    [...this.dotsEl.children].forEach((d,i)=>d.classList.toggle('active',i===this.current));
+    this.bar.style.width=((this.current)/(this.slides.length-1)*100)+'%';
+    this.noEl.textContent=String(this.current+1).padStart(2,'0')+' / '+String(this.slides.length).padStart(2,'0');
+  }
+  onScroll(){const idx=Math.round(window.scrollY/window.innerHeight);if(idx!==this.current){this.current=idx;this.update();}}
+  keys(){window.addEventListener('keydown',e=>{
+    if(e.target.getAttribute&&e.target.getAttribute('contenteditable'))return;
+    if(['ArrowDown','ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();this.go(this.current+1);}
+    else if(['ArrowUp','ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();this.go(this.current-1);}
+    else if(e.key==='Home'){this.go(0);}else if(e.key==='End'){this.go(this.slides.length-1);}
+  });}
+  touch(){let y=null;window.addEventListener('touchstart',e=>y=e.touches[0].clientY,{passive:true});
+    window.addEventListener('touchend',e=>{if(y===null)return;const dy=y-e.changedTouches[0].clientY;if(Math.abs(dy)>55)this.go(this.current+(dy>0?1:-1));y=null;},{passive:true});}
+}
+const deck=new Deck();
+
+/* =========================================== INLINE EDIT (E / ⌘S) =========================================== */
+const editor={isActive:false,
+  toggle(){this.isActive=!this.isActive;document.body.classList.toggle('edit-active',this.isActive);
+    document.getElementById('editToggle').classList.toggle('active',this.isActive);
+    document.getElementById('editBanner').classList.toggle('active',this.isActive);
+    document.querySelectorAll('h1,h2,h3,h4,p,li,span,a,.stat,.bigprice,.eyebrow').forEach(el=>{
+      if(el.closest('.nav-dots,.progress-bar,.edit-toggle,.edit-banner'))return;
+      if(this.isActive)el.setAttribute('contenteditable','true');else el.removeAttribute('contenteditable');});
+  },
+  export(){
+    const eds=[...document.querySelectorAll('[contenteditable]')];eds.forEach(el=>el.removeAttribute('contenteditable'));
+    document.body.classList.remove('edit-active');
+    const t=document.getElementById('editToggle'),b=document.getElementById('editBanner');
+    t.classList.remove('active','show');b.classList.remove('active');
+    const html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    document.body.classList.add('edit-active');eds.forEach(el=>el.setAttribute('contenteditable','true'));t.classList.add('active');b.classList.add('active');
+    const blob=new Blob([html],{type:'text/html'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='speed-hub-pitch-en.html';a.click();URL.revokeObjectURL(a.href);
+  }};
+const hot=document.querySelector('.edit-hotzone'),tog=document.getElementById('editToggle');let ht=null;
+hot.addEventListener('mouseenter',()=>{clearTimeout(ht);tog.classList.add('show');});
+hot.addEventListener('mouseleave',()=>{ht=setTimeout(()=>{if(!editor.isActive)tog.classList.remove('show');},400);});
+tog.addEventListener('mouseenter',()=>clearTimeout(ht));
+tog.addEventListener('mouseleave',()=>{ht=setTimeout(()=>{if(!editor.isActive)tog.classList.remove('show');},400);});
+tog.addEventListener('click',()=>editor.toggle());
+hot.addEventListener('click',()=>editor.toggle());
+window.addEventListener('keydown',e=>{
+  if((e.key==='e'||e.key==='E')&&!e.target.getAttribute('contenteditable')){editor.toggle();}
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='s'){e.preventDefault();editor.export();}
+});
+</script>
+</body>
+</html>
